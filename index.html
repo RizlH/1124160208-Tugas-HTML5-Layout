@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout HTML5</title>
+    <style>
+        body {
+          margin: 0;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          display: flex;
+          height: 100vh;
+        }
+        nav {
+          width: 25%;
+          background-color: #f0f0f0;
+          padding: 20px;
+        }
+        iframe {
+          width: 75%;
+          border: none;
+          height: 100vh;
+        }
+        a {
+          display: block;
+          margin: 10px 0;
+          text-decoration: none;
+          color: #333;
+        }
+        a:hover {
+          color: blue;
+        }
+      </style>
 </head>
 <body>
+
+    <nav>
+        <h2>Menu</h2>
+        <a href="content.html" target="ContentFrame">Beranda</a>
+        <a href="profile.html" target="ContentFrame">Profil</a>
+        <a href="contact.html" target="ContentFrame">Kontak</a>
+    </nav>
     
+    <iframe name="ContentFrame" src="content.html"></iframe>
+
 </body>
 </html>
