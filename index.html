@@ -7,43 +7,76 @@
     <style>
         body {
             margin: 0;
+            padding: 0;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             display: flex;
-            height: 100vh;
-
+            flex-direction: column;
+            min-height: 100vh;
         }
+        
+        header {
+            background-color: #4A7C59;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            padding-left: 50px;
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        
+        .content-wrapper {
+            display: flex;
+            flex: 1;
+        }
+        
         nav {
-            width: 25%;
+            width: 20%;
             background-color: #A0C878;
             padding: 20px;
             color: white;
         }
+        
         iframe {
             width: 75%;
             border: none;
-            height: 100vh;
+            height: calc(100vh - 70px);
         }
+        
         a {
             display: block;
             margin: 10px 0;
             text-decoration: none;
             color: white;
+            font-weight: 500;
         }
+        
         a:hover {
-            color: blue;
+            color: #2A4E3A;
+            transform: translateX(5px);
+            transition: transform 0.2s ease;
         }
-      </style>
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Tugas HTML5 Layout</h1>
+    </header>
 
-    <nav>
-        <h2>Menu</h2>
-        <a href="content.html" target="ContentFrame">Beranda</a>
-        <a href="profile.html" target="ContentFrame">Profil</a>
-        <a href="contact.html" target="ContentFrame">Kontak</a>
-    </nav>
-    
-    <iframe name="ContentFrame" src="content.html"></iframe>
-
+    <div class="content-wrapper">
+        <nav>
+            <h2>Menu</h2>
+            <a href="content.html" target="ContentFrame">Beranda</a>
+            <a href="profile.html" target="ContentFrame">Profil</a>
+            <a href="contact.html" target="ContentFrame">Kontak</a>
+        </nav>
+        
+        <iframe name="ContentFrame" src="content.html"></iframe>
+    </div>
 </body>
 </html>
