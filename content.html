@@ -8,15 +8,164 @@
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             background-color: #FFFDF6;
+            margin: 0;
+            padding: 0;
+            color: #333;
         }
 
-        h2 {
+        .button {
+            background-color: rgb(61, 61, 61);
+            opacity: 0.8;
+            border-radius: 10px;
+            padding: 5px 20px;
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 500;
+        }
+        
+        header {
+            background: url("image/me.jpg");
+            height: 30vh;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .header-opacity {
+            background-color: #ffffff;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0.45;
+            top: 0;
+            left: 0;
+        }
+
+        .header-ultraman {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             text-align: center;
+        }
+
+        .header-ultraman > h3 {
+            color: #fff;
+            font-size: 2rem;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 10px 0;
+        }
+        
+        .content-container {
+            padding: 20px 30px;
+        }
+        
+        .featured-section {
+            display: grid;
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .featured-card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .featured-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .featured-card h3 {
+            color: #4A7C59;
+            margin-top: 0;
+        }
+        
+        .featured-card p {
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: #333;
+            margin: 40px 0 20px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .section-title::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background-color: #A0C878;
+            border-radius: 3px;
+        }
+        
+        table {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            line-height: 0.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <h2>Selamat Datang</h2>
-    <p>Silahkan Pilih Menu Disebelah Kiri</p>
+    <header>
+        <div class="header-opacity"></div>
+        <div class="header-ultraman">
+            <h3><a class="button button-x1">Hi Everyone, Rizal is Here !!!</a></h3>
+        </div>
+    </header>
+    
+    <div class="content-container">
+        <h2 class="section-title">Selamat Datang</h2>
+        <p>Selamat datang di website pribadi saya. Di sini Anda dapat menemukan informasi tentang saya, proyek-proyek yang saya kerjakan, dan cara menghubungi saya.</p>
+        
+        <h2 class="section-title">Portofolio</h2>
+        <div class="featured-section">
+            <div class="featured-card">
+                <h3>Project</h3>
+                <p>Lihat koleksi proyek-proyek terbaru yang saya kerjakan selama Semester 2</p>
+                <table>
+                    <tr>
+                        <td>Aplikasi Rental Mobil Sederhana</td>
+                        <td><a href="https://github.com/RizlH/Python_RentalMobil" target="_blank">: Klik Disini</a></td>
+                    </tr>
+                    <tr>
+                        <td>Website Profil</td>
+                        <td><a href="https://github.com/RizlH/1124160208-UTS" target="_blank">: Klik Disini</a></td>
+                    </tr>
+                    <tr>
+                        <td>Project 3</td>
+                        <td>: Stay Tuned</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
